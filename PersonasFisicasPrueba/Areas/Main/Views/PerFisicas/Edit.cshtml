@@ -1,0 +1,110 @@
+﻿@model TbPersonasFisicas
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3 class="text-center">Editar Persona Fisica</h3>
+<hr />
+
+<form method="post" asp-area="Main" asp-controller="PerFisicas" asp-action="Update">
+    <div class="row px-2 mx-2 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-10 offset-1 mt-4">
+
+
+            <input type="hidden" asp-for="IdPersonaFisica" />
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="FechaRegistro"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="FechaRegistro" class="form-control" />
+                    <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="FechaActualizacion"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="FechaActualizacion" class="form-control" />
+                    <span asp-validation-for="FechaActualizacion" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Nombre"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="ApellidoPaterno"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="ApellidoPaterno" class="form-control" />
+                    <span asp-validation-for="ApellidoPaterno" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="ApellidoMaterno"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="ApellidoMaterno" class="form-control" />
+                    <span asp-validation-for="ApellidoMaterno" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Rfc"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Rfc" class="form-control" />
+                    <span asp-validation-for="Rfc" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="FechaNacimiento"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="FechaNacimiento" class="form-control" />
+                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="UsuarioAgrega"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="UsuarioAgrega" class="form-control" />
+                    <span asp-validation-for="UsuarioAgrega" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    <partial name="VistaVolverCrear" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
